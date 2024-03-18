@@ -20,4 +20,17 @@ const isAnagram = (s, t) => {
 ```
 
 ## Using set as hash map
+The set is like an array with no duplicates (at least in JavaScript), so it can be a hash map. JavaScript has a built-in constructor for set, which can take an array as a parameter. So it's easy to use. However, it's slower and costs more memory space, so use the array if possible.
+
+[349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
+```js
+const intersection = (nums1, nums2) => {
+    if (nums1.length < nums2.length) [nums1, nums2] = [nums2, nums1]
+    const set1 = new Set(nums1)
+    const res = new Set()
+    for (const n of nums2) set1.has(n) && res.add(n)
+    return Array.from(res)
+};
+```
+
 ## Using map as hash map
