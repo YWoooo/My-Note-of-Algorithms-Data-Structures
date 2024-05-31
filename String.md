@@ -1,5 +1,7 @@
 # String
-A string is an array of characters with other APIs for manipulating strings, which means many array algorithms are also valuable for strings, such as two-pointers.
+A string is an array of characters with other APIs and algorithms for manipulating strings, which means many array algorithms are also heavily used in strings, such as two-pointers and the sliding window.
+
+While finding substrings, try the sliding window since it's good at finding sub-things. While finding unique or without repeating strings, try hashmap, for sure.
 
 ## Reverse String
 [Like the linked list](https://github.com/YWoooo/My-Note-of-Algorithms-Data-Structures/blob/master/LinkedList.md#206-reverse-linked-list), reversing is always a good test of our familiarity with a data structure. In this simple case, we use two-pointers as well.
