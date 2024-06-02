@@ -20,7 +20,7 @@ const reverseString = (s) => {
 ```
 
 ## Pattern Matching
-Another big topic for string is pattern matching, aka [finding if a string exists in another string.](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string) Of course, we can use two loops to compare each character, but it'll be O(m+n). That's why we have the KMP algorithm.
+Another big topic for string is pattern matching, aka finding if a string exists in another string. Of course, we can use two loops to compare each character, but it'll be O(m+n). That's why we have the KMP algorithm.
 
 The time complexity is O(m+n) because we start over from the first character every time we mismatch. What if we don't have to start from the first character? The mismatch index is after a suffix, so if there is an equivalent prefix and we want to start over, we can start from the index after that prefix since the prefix and the suffix are equal and already matched. That's the KMP algorithm.
 
