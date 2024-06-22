@@ -31,34 +31,6 @@
     ```
 - Inorder
   ```js
-  const postorderTraversal = (root) => {
-    // Recursion
-    const res = []
-    const dfs = (root) => {
-        if (!root) return
-        dfs(root.left)
-        dfs(root.right)
-        res.push(root.val)
-    }
-    dfs(root)
-    return res
-  
-    // Iteration
-    const res = []
-    if (!root) return res
-    const stack = [root]
-    let curr = null
-    while (stack.length) {
-        curr = stack.pop()
-        res.push(curr.val)
-        curr.left && stack.push(curr.left)
-        curr.right && stack.push(curr.right)
-    }
-    return res.reverse()
-  };
-  ```
-- Postorder
-  ```js
   const inorderTraversal = (root) => {
     // Recursion
     const res = []
@@ -86,6 +58,34 @@
         }
     }
     return res
+  };
+  ```
+- Postorder
+  ```js
+  const postorderTraversal = (root) => {
+    // Recursion
+    const res = []
+    const dfs = (root) => {
+        if (!root) return
+        dfs(root.left)
+        dfs(root.right)
+        res.push(root.val)
+    }
+    dfs(root)
+    return res
+  
+    // Iteration
+    const res = []
+    if (!root) return res
+    const stack = [root]
+    let curr = null
+    while (stack.length) {
+        curr = stack.pop()
+        res.push(curr.val)
+        curr.left && stack.push(curr.left)
+        curr.right && stack.push(curr.right)
+    }
+    return res.reverse()
   };
   ```
 ### BFS
